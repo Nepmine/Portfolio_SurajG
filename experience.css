@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.journey_container{
+    background-color: #f7f7f7;
+    padding: 3vw 0 15vw 0;
+}
+.cont_about_me{
+    width: 100vw;
+    height: 20vh;
+}
+.about_me{
+    font-family: 'Sono', sans-serif;
+    width: 100vw;
+    height: auto;
+    margin-top: 5vh;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    /* background-color: azure; */
+}
+.about_me h1{
+    padding: 2vh 5vh;
+    border-bottom: 1px solid gray;
+    /* border-radius: 5%; */
+    letter-spacing: 0.1vw;
+    position: relative;
+}
+.about_me h1:after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height:0;
+    bottom: -1px;
+    left: 35%;
+
+    /* background-color: blue; */
+    border-bottom: 2px solid black;
+}
+/* ------------------- Journey- line_1---------- */
+.mid_line{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: 'Sono', sans-serif;
+}
+.mid_line::before{  
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 50vw;
+    height: 100vh;
+    border-left: 3px solid rgba(128, 128, 128, 0.176);
+    margin: 0 auto;
+}
+.mid_line{
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    width: 100vw;
+    /* height: 25vh; */
+    /* padding-bottom: 5vh; */
+    /* border: 1px solid #000; */
+    position: relative;
+    display: flex;
+}
+/* for small circles */
+.col::before{
+    content: "";
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    background-color: #f7f7f7;
+    border: 2px solid gray;
+    border-radius: 50%;
+    left: 49.1vw;
+    top: 44.8%;
+    transition: 500ms ease;
+    z-index: 1;
+}
+.col::after{
+    content: "";
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    border: 2px solid black;
+    border-radius: 50%;
+    left: 49.6vw;
+    top: 44.8%;
+    transition: 500ms ease;
+    z-index: 2;
+}
+.inrow_left{
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_circle{
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 200ms linear;        
+    transform: translateX(0.5vw);
+    z-index: 4;
+}
+/*  for line  */
+
+.inner_circle::after{
+    content: "";
+    position: absolute;
+    width: calc(23.8vw - 8.5vh);
+    /* width: calc(24vw - 8.5vh);   actual*/
+    left: 102%;
+    bottom: 50%;
+    border-bottom: 2px solid rgba(186, 179, 179, 0.74);
+    background-color: #f7f7f7;
+    transition: 200ms linear;        
+    z-index: -1;
+}
+/* for circle with it */
+.inrow_left::after{
+    content: "";
+    position: absolute;
+    width: 16.5vh;
+    height: 16.5vh;
+    border: 2px solid rgb(180, 172, 172);
+    border-radius: 50%;
+    transition: 200ms linear;   
+    z-index: 3;     
+}
+.inner_circle span{
+    font-size: medium;
+    font-weight: bolder;
+    color: rgb(130, 81, 81);
+}
+.inner_circle h1,.inner_circle2 h1{
+    font-size:x-large;
+}
+
+.inrow_right{
+    margin-left: 4.5vw;
+    width: 35vw;
+    height: auto;
+    /* background-color: blanchedalmond; */
+}
+.inrow_right span{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5em; 
+    margin-top: 2vw;
+}
+.inrow_right h5{
+    font-size: small;
+    margin-top: 0.5vw;
+    color: rgba(128, 128, 128, 0.749);
+}
+
+
+/* For different direction ---> --->*/
+
+.inrow_left2{
+    position: relative;
+    width: 50vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left2_main{
+    float: right;
+    width: 35vw;
+    height: 25vh;
+    margin-right: 4.5vw;
+    /* background-color: rgb(179, 242, 211); */
+    text-align: right;
+}
+.inrow_left2 span{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5em; 
+    margin-top: 2vw;
+}
+.inrow_left2 h5{
+    font-size: small;
+    margin-top: 0.5vw;
+    font-weight: bold;
+    color: rgba(128, 128, 128, 0.749);
+}
+
+.inrow_right2{
+    width: 50vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_circle2{
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 200ms linear;        
+    transform: translateX(-0.5vw);
+    z-index: 4;
+}
+/*  for line  */
+.inner_circle2::after{
+    content: "";
+    position: absolute;
+    width: calc(23.8vw - 8.5vh);
+    /* width: calc(24vw - 8.5vh); actual */
+    right: 102%;
+    bottom: 50%;
+    border-bottom: 2px solid rgba(186, 179, 179, 0.74);
+    background-color: #f7f7f7;
+    transition: 200ms linear;        
+    z-index: -1;
+}
+
+
+/* for circle with it */
+.inrow_right2::after{
+    content: "";
+    position: absolute;
+    width: 16.5vh;
+    height: 16.5vh;
+    border: 2px solid rgb(180, 172, 172);
+    border-radius: 50%;
+    transition: 200ms linear;   
+    z-index: 3;      
+}
+
+.inner_circle2 span{
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(130, 81, 81);
+}
+
+/* --------Animation---------- */
+.col:hover .inner_circle{
+    transform:translateX(-0.2vw);
+}
+.col:hover .inner_circle::after{
+    transform:translateX(0.5vw); /* line*/
+}
+.col:hover .inrow_left::after{  /* gray circle*/
+    transform:translateX(0.5vw);
+}
+/* for left part */
+.col:hover .inner_circle2{
+    transform:translateX(0.2vw);
+}
+.col:hover .inner_circle2::after{
+    transform:translateX(-0.5vw); /* line*/
+}
+.col:hover .inrow_right2::after{  /* gray circle*/
+    transform:translateX(-0.5vw);
+}
+
+
+/* Universal */
+
+.col:hover::before{
+    left: 49.6vw;
+}
+.col:hover::after{
+    left: 49.1vw;
+}
+
+@media screen and (max-width: 790px) {
+    /* .col{
+        height: 120vh;
+    } */
+    /* .mid_line{
+        padding-bottom: 15vh;
+    } */
+
+    .journey_container{
+    padding: 3vw 0 40vw 0;
+    }
+}

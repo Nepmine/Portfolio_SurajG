@@ -1,0 +1,250 @@
+.flash_menu{
+    position:absolute;
+    /* float: left; */
+    width: 100%;
+    height: 95vh;
+    /* background-color: rgba(0, 0, 0, 0.231); */
+    z-index: 5;
+    display: none;
+    animation: shadow_color 200ms ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes shadow_color{
+    0%{
+        background-color: none;
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.231);
+    }
+}
+.shown{
+    /* width: 30vw; */
+    width: 50vw;
+    /* width: 30vw; */
+    height: 100vh;
+    background-color: white;
+    float: right;
+    /* margin-right: 1vw; */
+    /* position: relative; */
+    /* ====for javascript===== */
+    animation:visibles 700ms ease;
+}
+@keyframes visibles{
+    0%{
+        transform: translateX(550px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.cross{
+    float: right;
+    text-align: end;
+    font-size: calc(12px + 1vw);
+    /* font-size: 40px; */
+    margin-right: 2vw;
+    margin-top: 2vw;
+}
+.cross:hover{
+    cursor: pointer;
+}
+.shown ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top:20%;
+    /* position: relative; */
+}
+.shown ul li{
+    margin-left: 6vw;
+    margin-top: 5vw;
+    text-decoration: none;
+    font-size: larger;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Sono', sans-serif;
+}
+.shown ul li:hover{
+    cursor: pointer;
+}
+.shown ul li{
+    display: inline-block;
+}
+.shown ul li a{
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+.shown ul li a::after{
+    /* margin-top: 1.7vw !important; */
+    margin-top: calc(15px + 1.8vh) !important;
+}
+.shown a::after{
+    margin-top: 3vh;
+}
+
+/* animation by javascript */
+.byjava{ 
+    transition: all 2s ease;
+}
+
+/* ------------------------Navigation---------------- */
+.container{
+    font-family: 'Sono', sans-serif;
+    width: 100%;
+    height: 8vw;
+    min-height: 5vw;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+.logo{
+    width: 30vw;
+    font-family: 'Sono', sans-serif;
+    font-size: 4vw;
+    letter-spacing: 0.2vw;
+    text-align: center;
+}
+.logo a{
+    margin-left: 4vw;
+    text-decoration: none;
+    color: black;
+}
+.logo a:hover{
+    cursor: pointer;
+}
+.nav ul{
+    display: flex;
+    /* border: 2px solid yellow; */
+    width: 60vw;
+    align-items: center;
+    justify-content:flex-end;
+}
+.nav ul li{
+    text-decoration: none;
+    list-style: none;
+    /* border: 2px solid black; */
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size:calc(8px + 0.9vw);
+    color: black;
+}
+.nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+.nav ul li:hover a{
+    cursor: pointer;
+}
+.shown ul li{
+    /* transform: translateX(20 0px); */
+    cursor: pointer;
+    animation:anim 1s ease-out;
+    animation-delay: 300ms;
+    transform: translateY(80px);
+    animation-play-state: paused;
+}
+@keyframes anim{
+    0%{
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.a:after{
+    content: '';
+  position: absolute;
+  width: 0; height: 2px;
+  margin-top: 1.5vw;
+  right: 0;
+  background: #fff;
+  transition: width .2s ease;
+}
+.a:hover:after{
+    width: 100%;
+  left: 0;
+  background: rgb(71, 70, 70);
+}
+/* ------------ size sano garauda nav ---------- */
+
+.menu{
+    width: auto;
+    height: 3vh;
+    margin-right: 4vw;
+    /* display: none; */
+    
+}
+.holder{
+    float: right;
+    width: 3vw;
+    min-width: 20px;
+    min-height: 15px;
+    height: 3vw;
+    margin: 0 auto;
+}
+.holder div{
+    width: 100%;
+    border-bottom: 0.35vw solid rgb(90, 90, 90) ;
+    border-radius: 1px;
+}
+/* .holder div{
+    background-color: black;
+    min-height: 2px;
+} */
+.holder:hover {
+    cursor: pointer;
+}
+.holder:hover .ln1{
+    display: none;
+}
+.holder:hover .ln2{
+    transform:translate(0.45vw,0.1vw) rotate(-61deg); 
+    transition:300ms linear;
+}
+.holder:hover .ln3{
+    transform:translate(-0.45vw,-0.8vw) rotate(61deg); 
+    transition:300ms linear;
+}
+.ln2, .ln3{
+    margin-top: 0.5vw;
+}
+
+
+@media screen and (max-width: 600px) {
+    /* body{
+        background-color: red;
+    } */
+    
+    .logo{
+        min-height: 20px;
+        font-size: 25px;
+    }
+    ul li{
+        font-size: 10px;
+    }
+    .icon{
+        font-size: 20px;
+        padding: 0 0 0 5px;
+    }
+    .menu{
+        display: block;
+    }
+    .nav ul{
+        display: none;
+    }
+    .holder{
+        margin-top: 1vh;
+    }
+    .holder div{
+        width: 100%;
+        border-bottom: 2.5px solid rgb(63, 63, 63) ;
+        border-radius: 1px;
+    }
+  }

@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    /* background-color: beige; */
+}
+.center2{
+    justify-content: space-around ;
+}
+.hexagon {
+    background-color: black;
+    /* height: 25vw;
+    width: 25vw; */
+    height: calc(300px + 12vw);
+    width: calc(300px + 12vw);
+    clip-path: polygon(0% 75%, 0% 25%, 25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%);
+    /* hexagon */
+    /* border: 5px groove green; */
+    box-shadow: 0 0 45px inset white;
+    box-shadow: 0 0 45px gray;
+    position: relative;
+    min-height: 0px;
+}
+
+/* this thing has no function rather then centering hexagon */
+.upper, .lower { 
+    display: flex;
+    justify-content: center;
+    gap: 19vw;
+    height: calc((100vh - 25vw)/2);
+}
+.piller{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.piller1{
+    position: absolute;
+    width: 8.7vw;
+    height: 100%;
+    min-height: 50%;
+    max-height: 100%;
+    transform: rotate(45deg);
+    background-color: gray;
+    box-shadow: 0 0 55px black inset;
+    
+    /* border: 5px groove green; */
+}
+.piller2{
+    position: absolute;
+    width: 8.7vw;
+    height: 100%;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 55px black inset;
+    background-color: gray;
+}
+/*
+ .upper1,
+.lower2 {
+    width: 8.7vw;
+    height: calc((100vh - 25vw)/2);
+    background-color: gray;
+    transform: rotate(-45deg);
+    border:5px groove green;
+    
+}
+
+.upper2,
+.lower1 {
+    width: 8.7vw;
+    height: calc((100vh - 25vw)/2);
+    background-color: gray;
+    transform: rotate(45deg);
+    border: 5px groove green;
+}
+.upper1, .upper2{
+    border-bottom:none;
+margin-top: 4.99%;
+}
+.lower1, .lower2{
+    border-top:none ;
+} */

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://kit.fontawesome.com/be0e2ae652.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div class="flash_menu" id="flash">
+
+        <!-- ==================flash menu================ -->
+        <div class="shown" id="shown_js">
+            <i class="fa-solid fa-xmark cross" onclick="hide()"></i>
+            <ul>
+                <li><a class="a" href="portfolio_repair_1/portfolio.html">Home</a></li>
+                <li><a class="a" href="about_me.html">About-me</a></li>
+                <li><a class="a" href="project.html">Projects</a></li>
+                <li><a class="a" href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- --------Navigation------------- -->
+    <div class="whole" id="who">
+        <i class="fa-solid fa-location-dot" id="loc"></i>
+    </div>
+
+
+    <div class="container">
+        <div class="logo"><a href="portfolio_repair_1/portfolio.html">Nepmine</a></div>
+        <div class="nav">
+            <ul>
+                <li><a class="a" href="about_me.html">About-me</a></li>
+                <li><a class="a">Projects</a></li>
+                <li><a class="a" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!------------------- nav resize------------- -->
+        <div class="menu">
+            <div class="holder" onclick="showing()">
+                <div class="line1 ln1"></div>
+                <div class="line2 ln2"></div>
+                <div class="line3 ln3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="about_me">
+        <h1>Get in Touch</h1>
+
+    </div>
+    <!-- ========================Here=================== -->
+    <div class="details">
+        <div class="inside_l">
+            <img src="me.jpg" id="me">
+        </div>
+
+
+        <div class="inside_l">
+            <h2>Suraj Ghimire</h2>
+            <!-- <h3><b>Location :</b>Butwal, Nepal</h3> -->
+            <h3 class="tooltip"><b>Email :</b><a href="mailto:surajghimire13579@gmail.com" onclick="copy()">suarjghimire13579@gmail.com</a></h3>
+            <!-- <h3 class="tooltip"><b>Email :</b><a onclick="copy()">suarjghimire13579@gmail.com</a></h3> -->
+            <h3 class="tooltip"><b>Contact :</b>+977 9866140033</h3>
+            <h3 class="tooltip"><b>Contact :</b>+91 9473548106 <span>(India)</span></h3>
+            <center><iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38281.08532243205!2d83.42332177040419!3d27.6738235578277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996864275d9755f%3A0x2b1e92d89d4bb3ae!2sButwal%2C%20Nepal!5e0!3m2!1sen!2sin!4v1670397237627!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+        </div>
+    </div>
+
+    <script>
+
+        function hide() {
+
+            document.getElementById('flash').style.display = 'none';
+
+        }
+        function showing() {
+            document.getElementById('flash').style.cssText = 'display:inline-block';
+            // document.getElementById('shown_js'). style. cssText = 'width: 30vw;';
+            // document.getElementById("shown_js").style.transition = "all 2s ease";
+        }
+
+
+        setTimeout(() => {
+            document.getElementById('who').style.display = "none";
+        }, 2000)
+
+
+        function copy() {
+            var x = "surajghimire13579@gmail.com";
+            navigator.clipboard.writeText(x);
+
+            var graphElem = document.querySelector('.tooltip');
+            event.target.setAttribute('data-after', 'anything');
+            document.getElementById('tooltip').before = "anything";
+
+
+        }
+    </script>
+</body>
+
+</html>

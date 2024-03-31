@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 20vw;
+    height: 20vw;
+    background-color: beige;
+    border: 1vw solid black;
+    margin: 0 auto;
+    margin-top: 10vw;
+    justify-content: center;
+    align-items: center;
+}
+.container:hover{
+    cursor: pointer;
+}
+.container .ln{
+    margin: 0 auto;
+    width: 16vw;
+    margin-top: 3.5vw;
+    border-bottom: 1vw solid black ;
+    
+}

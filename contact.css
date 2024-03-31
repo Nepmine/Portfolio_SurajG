@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+  }
+
+body{
+    max-width: 98.8vw;
+}
+.whole{
+    width: 98.8vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bod 2s ease;
+    animation-fill-mode: forwards;
+    z-index: 7;
+    
+}
+@keyframes bod{
+    0%{
+        background-color: rgba(88, 87, 87, 0.689);
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+#loc{
+    position: absolute;
+    font-size: 20vw;
+    color: rgb(68, 53, 53);
+    /* transition: all 2s ease; */
+    animation: loc 2s ease;
+    animation-fill-mode: forwards;
+    font-size: 98.8vw;
+    font-size: 10vw;
+}
+@keyframes loc{
+    0%{
+        font-size: 98.8vw;
+    }
+    80%{
+        font-size: 10vw;
+        
+    }
+    100%{
+        font-size: 10vw;
+        transform: rotateY(180deg);
+        
+    }
+}
+
+
+.about_me{
+    font-family: 'Forum', cursive !important;
+    width: 98.8vw;
+    height: auto;
+    margin-top: 2vh;
+    padding: 1vh 0 5vh 0;
+    display: flex;
+    justify-content: center;
+    /* background-color: azure; */
+}
+.about_me h1{
+    padding: 2vh 2.5vh;
+    border-bottom: 1px solid gray;
+    /* border-radius: 5%; */
+    letter-spacing: 0.1vw;
+    position: relative;
+}
+.about_me h1:after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height:0;
+    bottom: -1px;
+    left: 35%;
+
+    /* background-color: blue; */
+    border-bottom: 2px solid black;
+}
+
+/* -----------------------here------------------ */
+
+
+.details{
+    width: 98.8vw;
+    /* background-color: green; */
+    /* height: 64vh; */
+    gap: 2vw;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    justify-content: space-around;
+    font-family: 'Sono', sans-serif;
+    padding: 2vh 0 5vh 0;
+    flex-wrap: wrap;
+}
+.inside_l{
+    /* width: 600px; */
+    /* width: calc(10vw + 500px); */
+    width: clamp(500px, 45vw, 680px);
+    border: 2px solid black;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgba(168, 166, 166, 0.45);
+    box-shadow:3px 3px 10px gray;
+}
+#me{
+    width: 100%;
+    height: 100%;
+    border-style: blur;
+    /* border: 1px solid black; */
+    /* box-shadow: 2px ; */
+}
+.inside_l h2{
+    text-align: center;
+    padding: 2vh 0 2vh;
+}
+.inside_l h3{
+    margin-left: 2vw;
+}
+.inside_l iframe{
+    margin-top: 1.4vw;
+    /* margin-left: 12%; */
+    border: 0.5vw solid black;
+    width: 80%;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip::after{
+    content: "Click=COPY";
+    line-height: 1;
+    opacity: 0;
+    position: absolute;
+    font-size: small;
+    padding: 2px 4px;
+    border-radius: 5px;
+    left: 105%;
+    color: white;
+    background-color: gray;
+}
+.tooltip::before{
+    content: "";
+    position: absolute;
+        width: 0; 
+        height: 0; 
+        left: 103%;
+        top: 22%;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent; 
+        opacity: 0;
+        border-right:10px solid gray; 
+}
+.tooltip:hover::before, .tooltip{
+    opacity: 1;
+    cursor: pointer;
+}
+.tooltip:hover::after{
+    opacity: 1;
+    cursor: pointer;
+}
+
+b{
+    color: gray;
+}
+
+@media (min-width: 1011px){
+    /* *{
+        overflow: auto;
+    } */
+    .inside_l{
+        width: clamp(500px, 90vw, 680px);
+    }
+}

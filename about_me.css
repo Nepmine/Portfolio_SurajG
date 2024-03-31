@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+/* =============================flash menu=================== */
+/* in saperate stylesheet */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<< Here >>>>>>>>>>>>>>>>>> */
+
+.about_me{
+    font-family: 'Sono', sans-serif;
+    width: 100%;
+    height: auto;
+    margin-top: 5vh;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    /* background-color: azure; */
+}
+.about_me h1{
+    padding: 2vh 2.5vh;
+    border-bottom: 1px solid gray;
+    /* border-radius: 5%; */
+    letter-spacing: 0.1vw;
+    position: relative;
+}
+.about_me h1:after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height:0;
+    bottom: -1px;
+    left: 35%;
+
+    /* background-color: blue; */
+    border-bottom: 2px solid black;
+}
+
+/* --------------body----------------- */
+.about_body{
+    width: 100vw;
+    height: 64vh;
+    margin-top: 1.5vh;
+    /* background-color: beige; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Sono', sans-serif;
+    
+}
+.left_side, .right_side{
+    width: 50vw;
+    min-width: 20vw;
+    /* height: 64vh; */
+    background-color: rgb(255, 255, 255);
+    /* border-left: 2px solid black; */
+    
+}
+.left_side p{
+    margin-left: 9vw;
+    color: gray;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 10vh;
+}
+#button_cv{
+    margin-left: 9vw;
+    margin-top: 2vw;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 0.5vw 2vw;
+    transition:100ms ease;
+}
+#button_cv:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+/* ---------------------right side------------- */
+.right_all{
+    margin-left: 3vw;
+    margin-right: 10vw;
+    position: relative;
+}
+.arrow{
+    position: relative;
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vw);
+    /* background-color: rgba(219, 203, 203, 0.32);  */
+    left: 110%;
+    bottom: -5vw;
+}
+.arrow::after{
+    content: "\2193";
+    position: absolute;
+    margin-left: 20%;
+    /* width: calc(30px + 1vw);
+    height: calc(30px + 1vw); */
+    font-size: 3em;
+    font-weight:900;
+    color: rgba(9, 64, 71, 0.815);
+    /* background-color: rgba(219, 203, 203, 0.32); */
+    border-radius: 50%;
+    /* right: -6vw;
+    bottom: -5vw; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: excited 2s 5s infinite alternate ease-out;
+}
+.arrow:hover::after{
+    cursor: pointer;
+    font-size: 3em;
+    animation-play-state: paused;
+    color: rgba(40, 36, 36, 0.815);;
+}
+@keyframes excited{
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: transformY(0px);
+    }
+    20%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(10px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(10px)
+    }
+    80%{
+       
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    /* 100%{    
+        transform: translateY(0);
+    } */
+}
+/* .right_all::after:hover{
+    cursor: pointer;
+    animation: none;
+    font-size: 4em;
+
+    } */
+#dist_first{
+    margin-top: 9vh;
+}
+.web_design{
+    display: inline-block;
+    margin-top: 0.5vh;
+    line-height: 0.5vh;
+}
+.percent{
+    /* background-color: aquamarine; */
+    margin-left: calc(90% - 3%);
+    font-size: 0.7em;
+    
+}
+.skill1{
+    margin-top: 2vw;
+    color: rgb(102, 95, 95);
+}
+.skill1 p{
+    width: 100%;
+    height: 0vh;
+    border-bottom:8px solid rgba(101, 158, 148, 0.607) ;
+    border-radius: 4px;
+    position: relative;
+}
+.skill1 p::before{
+    content: "";
+    position: absolute;
+    height: 0vh;
+    /* bottom: -0.5vw; */
+    left: 0;
+    border-bottom:7px solid black ;
+    border-right: none;
+    border-radius: 4px;
+}
+.d1 p::before{
+    width: 90%;
+}
+#d2 p::before,  #d2 .percent{
+    width: 70%;
+}
+#d3 p::before, #d3 .percent{
+    width: 50%;
+}
+#d4 p::before, #d4 .percent{
+    width: 80%;
+}
+#d2 .percent{
+    margin-left: 68%;
+    display: inline-block;
+}
+#d3 .percent{
+    margin-left: 48%;
+    display: inline-block;
+}
+#d4 .percent{
+    margin-left: 78%;
+    display: inline-block;
+}
+
+@media screen and (max-width: 790px) {
+    .about_body{
+        /* width: 98vw; */
+        /* width: auto; */
+        height: 100vh;
+        margin-top: 1vh;
+        justify-content: flex-start;
+        overflow: hidden;
+        /* background-color: beige; */
+        /* gap: 40vw; */
+    }
+    /* .about_body p{
+        margin-top: 10vh;
+    } */
+    .left_side{
+        
+        width: 100%;
+    }
+    .right_side
+    {
+        width: 70vw;
+        margin-left: 10%;
+    }
+    .right_all{
+        margin: 0;
+        position: relative;
+    }
+    .left_side p{
+        font-size:medium;
+        padding-right: 9vw;
+    }
+    /* #button_cv{
+        justify-self: center;
+        margin: auto;
+    } */
+    .col{
+        display: flex;
+    }
+    .arrow{
+        display: none;
+    }
+
+    .inrow_right{
+        min-width: 45vw;
+    }
+    .left2_main{
+        min-width: 45vw;
+        text-align: center;
+    }
+    
+}
+
+
+/* Things can be done
+
+Nepmine in 3d
+up arrow and down arrow with schrool smooth
+*/
+
+
+.bld{
+    font-size: small;
+    font-weight: bold;
+    color: rgb(87, 87, 87);
+}
+
